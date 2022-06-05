@@ -1,4 +1,4 @@
-# Exp-06: ResNet32
+# Exp-06: ResNet34
 
 DATA:
   BASE_PATH: ''
@@ -14,8 +14,8 @@ DATA:
 
 MODEL:
   PROJECT_NAME: cancer-detection
-  RUN_NAME: exp06_resnet32_128x128
-  MODEL_NAME: 'resnet32'
+  RUN_NAME: exp06_resnet34_128x128
+  MODEL_NAME: 'resnet34'
   PRETRAINED: True
   IMAGE_SIZE: 128
   NUM_CLASSES: 1
@@ -41,5 +41,5 @@ TRAIN:
   WEIGHTS: ~
 
 PREDICT:
-  PRED_CSV: outputs/exp06_resnet32_128x128.csv
-  TEST_CSV: test_outputs/test_exp06_resnet32_128x128.csv
+  PRED_CSV: outputs/exp06_resnet34_128x128.csv
+  TEST_CSV: test_outputs/test_exp06_resnet34_128x128.csv
