@@ -24,7 +24,7 @@ class CancerDataset(Dataset):
         image_dir = self.image_dir + "/" + self.mode
 
         # Get image_path and load image in cv2 format
-        image_path = self.base_path + f'{image_dir}/{image_id}'
+        image_path = self.base_path + f'{image_dir}/{image_id}.png'
         image = cv2.imread(
             image_path, 
             )
