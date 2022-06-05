@@ -36,8 +36,9 @@ TRAIN:
   WEIGHT_DECAY: 1.0e-6
   N_ACCUMULATE: 1
 
-  # Loss
+  # Loss and Weights
   CRITERION: BCEWithLogitsLoss
+  WEIGHTS: ~
 
 PREDICT:
   PRED_CSV: outputs/exp01_vgg16_128x128.csv
