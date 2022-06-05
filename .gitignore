@@ -1,2 +1,11 @@
 input
 Prostate Cancer Data
+.ipynb_checkpoints/
+wandb/
+saved_models/
+outputs/
+test_notebook.ipynb
+*/__pycache__/*
+*.pyc
+__pycache__
+test_outputs

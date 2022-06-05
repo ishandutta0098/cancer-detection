@@ -1,0 +1,11 @@
+# Paths
+DATA_DIRECTORY: input 
+
+# Data Processing
+BLAZEFACE_IMAGE_SIZE: 128
+
+# Reproducibility
+SEED: 42
+
+# Folds
+NUM_FOLDS: 5

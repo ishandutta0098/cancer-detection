@@ -1,0 +1,45 @@
+# Exp-2: ResNet18 Model
+
+DATA:
+  BASE_PATH: ''
+
+  # mount drive at '/drive'
+  COLAB_BASE_PATH: /drive/MyDrive/skin-analysis/metadome-eyebagDetection-pytorch/
+
+  IMG_DIR: 'input/cropped_images'
+
+  TRAIN_CSV: input/csv_cropped/train.csv
+  VALID_CSV: input/csv_cropped/valid.csv
+  TEST_CSV: input/csv_cropped/test.csv
+
+MODEL:
+  PROJECT_NAME: metadome-eyebag-detection
+  RUN_NAME: exp02_resnet18_128x128
+  MODEL_NAME: 'resnet18'
+  PRETRAINED: True
+  IMAGE_SIZE: 128
+  NUM_CLASSES: 1
+  MODEL_PATH: saved_models
+
+TRAIN:
+  EPOCHS: 20
+
+  TRAIN_BATCH_SIZE: 16
+  VALID_BATCH_SIZE: 32
+
+  LEARNING_RATE: 1.0e-3
+
+  SCHEDULER: 'CosineAnnealingLR'
+  T_MAX: 500
+  MIN_LR: 1.0e-6
+  
+  WEIGHT_DECAY: 1.0e-6
+  N_ACCUMULATE: 1
+
+  # Loss and weights
+  CRITERION: BCEWithLogitsLoss
+  WEIGHTS: ~
+
+PREDICT:
+  PRED_CSV: outputs/exp02_resnet18_128x128.csv
+  TEST_CSV: test_outputs/test_exp02_resnet18_128x128.csv
