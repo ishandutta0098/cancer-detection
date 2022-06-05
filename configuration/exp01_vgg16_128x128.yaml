@@ -6,7 +6,7 @@ DATA:
   # mount drive at '/drive'
   COLAB_BASE_PATH: /drive/MyDrive/cancer-detection/
 
-  IMG_DIR: 'input/images'
+  IMG_DIR: 'input'
 
   TRAIN_CSV: input/csv/train.csv
   VALID_CSV: input/csv/valid.csv
