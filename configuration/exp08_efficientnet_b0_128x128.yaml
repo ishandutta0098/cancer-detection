@@ -1,0 +1,45 @@
+# Exp-08: EfficientNet B0
+
+DATA:
+  BASE_PATH: ''
+
+  # mount drive at '/drive'
+  COLAB_BASE_PATH: /drive/MyDrive/cancer-detection/
+
+  IMG_DIR: 'input'
+
+  TRAIN_CSV: input/csv/train.csv
+  VALID_CSV: input/csv/valid.csv
+  TEST_CSV: input/csv/test.csv
+
+MODEL:
+  PROJECT_NAME: cancer-detection
+  RUN_NAME: exp08_efficientnet_b0_128x128
+  MODEL_NAME: 'efficientnet_b0'
+  PRETRAINED: True
+  IMAGE_SIZE: 128
+  NUM_CLASSES: 1
+  MODEL_PATH: saved_models
+
+TRAIN:
+  EPOCHS: 25
+
+  TRAIN_BATCH_SIZE: 16
+  VALID_BATCH_SIZE: 32
+
+  LEARNING_RATE: 1.0e-3
+
+  SCHEDULER: 'CosineAnnealingLR'
+  T_MAX: 500
+  MIN_LR: 1.0e-6
+  
+  WEIGHT_DECAY: 1.0e-6
+  N_ACCUMULATE: 1
+
+  # Loss and Weights
+  CRITERION: BCEWithLogitsLoss
+  WEIGHTS: ~
+
+PREDICT:
+  PRED_CSV: outputs/exp08_efficientnet_b0_128x128.csv
+  TEST_CSV: test_outputs/test_exp08_efficientnet_b0_128x128.csv
